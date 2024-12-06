@@ -3,7 +3,7 @@
 namespace Tamayo\LaravelScoutElastic;
 
 use Exception;
-use Elastic\Elasticsearch\ClientBuilder;
+use Elasticsearch\ClientBuilder;
 use Laravel\Scout\EngineManager;
 use Illuminate\Support\ServiceProvider;
 use Tamayo\LaravelScoutElastic\Engines\ElasticsearchEngine;
