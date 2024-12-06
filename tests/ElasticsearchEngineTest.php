@@ -4,7 +4,7 @@ namespace Tamayo\LaravelScoutElastic\Tests;
 
 use Mockery;
 use Mockery\MockInterface;
-use Elasticsearch\Client;
+use Elastic\Elasticsearch\Client;
 use Laravel\Scout\Builder;
 use PHPUnit\Framework\TestCase;
 use Illuminate\Database\Eloquent\Model;
@@ -97,7 +97,7 @@ class ElasticsearchEngineTest extends TestCase
     public function test_builder_callback_can_manipulate_search_parameters_to_elasticsearch()
     {
         /** @var Client|MockInterface $client */
-        $client = Mockery::mock(\Elasticsearch\Client::class);
+        $client = Mockery::mock(\Elastic\Elasticsearch\Client::class);
         $client->shouldReceive('search')->with(['modified_by_callback']);
 
         $engine = new ElasticsearchEngine($client);
